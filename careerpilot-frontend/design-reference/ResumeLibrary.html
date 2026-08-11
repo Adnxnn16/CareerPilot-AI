@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Resume Library - CareerPilot AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-secondary-fixed-variant": "#404758",
+                "error": "#ba1a1a",
+                "success-green": "#00703C",
+                "border-subtle": "#E5E7EB",
+                "tertiary-fixed-dim": "#ffb695",
+                "surface-container-lowest": "#ffffff",
+                "background": "#f9f9f9",
+                "surface-bright": "#f9f9f9",
+                "on-tertiary-fixed": "#351000",
+                "on-surface-variant": "#464555",
+                "surface-dim": "#dadada",
+                "on-primary-fixed-variant": "#3323cc",
+                "tertiary-fixed": "#ffdbcc",
+                "on-background": "#1a1c1c",
+                "primary": "#3525cd",
+                "secondary-container": "#d9dff5",
+                "secondary": "#575e70",
+                "on-error-container": "#93000a",
+                "surface-container-high": "#e8e8e8",
+                "inverse-surface": "#2f3131",
+                "text-muted": "#6B7280",
+                "on-error": "#ffffff",
+                "on-surface": "#1a1c1c",
+                "tertiary": "#7e3000",
+                "secondary-fixed": "#dce2f7",
+                "surface-variant": "#e2e2e2",
+                "on-secondary": "#ffffff",
+                "on-primary-fixed": "#0f0069",
+                "surface-primary": "#FFFFFF",
+                "inverse-primary": "#c3c0ff",
+                "outline-variant": "#c7c4d8",
+                "on-primary": "#ffffff",
+                "outline": "#777587",
+                "error-container": "#ffdad6",
+                "surface-container-highest": "#e2e2e2",
+                "surface": "#f9f9f9",
+                "tertiary-container": "#a44100",
+                "primary-fixed-dim": "#c3c0ff",
+                "on-tertiary-fixed-variant": "#7b2f00",
+                "primary-container": "#4f46e5",
+                "on-secondary-fixed": "#141b2b",
+                "primary-fixed": "#e2dfff",
+                "on-primary-container": "#dad7ff",
+                "surface-container": "#eeeeee",
+                "link-blue": "#1D70B8",
+                "on-secondary-container": "#5c6274",
+                "inverse-on-surface": "#f0f1f1",
+                "on-tertiary": "#ffffff",
+                "surface-tint": "#4d44e3",
+                "secondary-fixed-dim": "#c0c6db",
+                "on-tertiary-container": "#ffd2be",
+                "surface-container-low": "#f3f3f3"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "stack-lg": "32px",
+                "container-max": "1200px",
+                "gutter": "24px",
+                "stack-xl": "64px",
+                "stack-sm": "8px",
+                "base": "8px",
+                "stack-md": "16px",
+                "margin-mobile": "16px"
+        },
+        "fontFamily": {
+                "headline-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "label-xs": [
+                        "Inter"
+                ],
+                "display-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "label-sm": [
+                        "Inter"
+                ],
+                "display-lg-mobile": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-lg": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.3",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-xs": [
+                        "12px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "1.4",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+    body {
+        background-color: #FAFAFA;
+    }
+</style>
+</head>
+<body class="font-body-md text-on-background flex min-h-screen antialiased bg-background">
+<!-- SideNavBar (Hidden on Mobile, Visible on md+) -->
+<nav class="hidden md:flex h-screen w-64 flex-col bg-surface-container-lowest border-r border-border-subtle shadow-sm fixed left-0 top-0 p-4 space-y-stack-md z-40">
+<div class="flex items-center gap-3 px-4 py-3 mb-4">
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container font-headline-md font-bold text-lg">
+                C
+            </div>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">CareerPilot AI</h1>
+<p class="font-label-xs text-label-xs text-text-muted">The Calm Mentor</p>
+</div>
+</div>
+<button class="w-full bg-primary-container text-white py-2 px-4 rounded-lg font-label-sm text-label-sm hover:bg-primary transition-colors flex items-center justify-center gap-2 shadow-[0_4px_12px_rgba(0,0,0,0.05)] focus:ring-2 focus:ring-primary-container focus:ring-offset-2">
+<span class="material-symbols-outlined text-[18px]">add</span>
+            New Application
+        </button>
+<div class="flex-1 space-y-2 mt-6">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-on-secondary-container font-semibold rounded-lg translate-x-1 transition-transform shadow-[0_4px_12px_rgba(0,0,0,0.05)]" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">description</span>
+<span class="font-label-sm text-label-sm">Resume Library</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">search</span>
+<span class="font-label-sm text-label-sm">Job Search</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+<span class="font-label-sm text-label-sm">Application Tracker</span>
+</a>
+</div>
+<div class="mt-auto space-y-2 pt-4 border-t border-border-subtle">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">help</span>
+<span class="font-label-sm text-label-sm">Support</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col md:ml-64 w-full">
+<!-- TopNavBar (Mobile Only) -->
+<header class="md:hidden flex justify-between items-center px-gutter w-full sticky top-0 z-50 bg-surface h-16 shadow-sm border-b border-border-subtle">
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                CareerPilot AI
+            </div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container-low transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<img alt="User profile photo" class="w-8 h-8 rounded-full object-cover border border-border-subtle shadow-sm" data-alt="A small, circular avatar portrait of a professional smiling individual against a clean, light grey background. High-key lighting, minimalist corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5JYyZiwi_dBpT8H3nch4msPltKVDOp8Q9k_xaX98Ylpntzk-eZB3VXEVy4jCNX0PUMTaJ_65chc79VL2fgzHETsm_4gM7om541BeF1u5mX-bq9R-D8y9dW_pSBRJjN5eFuEk4S4Ti3d4RiDv4KWhj5_Va7nBjR3dGozNMExBDZHOGOKsP_hbIrdEMlfqQ6nDJUAlyHNfOThcPOi-ztnj1hK_bPXTgPJXyub1Cbb5Ids_nc6D22ECg"/>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 p-gutter max-w-container-max mx-auto w-full pb-stack-xl">
+<div class="mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Resume Library</h2>
+<p class="font-body-md text-body-md text-text-muted">Manage your tailored resumes and track their parsing status.</p>
+</div>
+<!-- Upload Dropzone -->
+<div class="mb-stack-lg w-full border-2 border-dashed border-border-subtle rounded-xl bg-surface-primary hover:bg-surface-container-low transition-colors flex flex-col items-center justify-center p-stack-lg cursor-pointer shadow-[0_4px_12px_rgba(0,0,0,0.02)]">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mb-4 shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl">upload_file</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-lg mb-1">Upload New Resume</h3>
+<p class="font-body-md text-body-md text-text-muted text-center max-w-md mb-4">Drag and drop your PDF or DOCX file here, or click to browse files. Our AI will automatically parse and optimize it.</p>
+<button class="bg-primary-container text-white px-6 py-2 rounded-lg font-label-sm text-label-sm hover:bg-primary transition-colors shadow-sm focus:ring-2 focus:ring-primary-container focus:ring-offset-2">
+                    Browse Files
+                </button>
+</div>
+<!-- Resumes Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Parsed Resume Card -->
+<div class="bg-surface-primary rounded-xl border border-border-subtle p-6 shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-secondary-fixed rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-label-xs font-label-xs bg-[#e6f4ea] text-success-green border border-[#cce8d6]">
+                            Parsed
+                        </span>
+</div>
+<h4 class="font-headline-md text-headline-md text-base text-on-surface mb-1 truncate">Main CV 2024 - Tech Lead</h4>
+<p class="font-label-sm text-label-sm text-text-muted mb-4">Updated 2 days ago • PDF</p>
+<div class="mt-auto pt-4 border-t border-border-subtle flex justify-between items-center">
+<button class="text-link-blue font-label-sm text-label-sm hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">visibility</span> View
+                        </button>
+<button class="text-text-muted hover:text-on-surface p-1 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Parsing Resume Card -->
+<div class="bg-surface-primary rounded-xl border border-border-subtle p-6 shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-secondary-fixed rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-label-xs font-label-xs bg-[#fff4e5] text-[#b26a00] border border-[#ffe0b2] animate-pulse">
+                            Parsing...
+                        </span>
+</div>
+<h4 class="font-headline-md text-headline-md text-base text-on-surface mb-1 truncate">Product Designer Draft.pdf</h4>
+<p class="font-label-sm text-label-sm text-text-muted mb-4">Uploaded just now</p>
+<div class="mt-auto pt-4 border-t border-border-subtle flex justify-between items-center opacity-50 cursor-not-allowed">
+<button class="text-link-blue font-label-sm text-label-sm flex items-center gap-1 pointer-events-none">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span> Analyzing
+                        </button>
+</div>
+</div>
+<!-- Older Resume Card -->
+<div class="bg-surface-primary rounded-xl border border-border-subtle p-6 shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-secondary-fixed rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-label-xs font-label-xs bg-[#e6f4ea] text-success-green border border-[#cce8d6]">
+                            Parsed
+                        </span>
+</div>
+<h4 class="font-headline-md text-headline-md text-base text-on-surface mb-1 truncate">Senior UX 2023.docx</h4>
+<p class="font-label-sm text-label-sm text-text-muted mb-4">Updated Oct 12, 2023 • DOCX</p>
+<div class="mt-auto pt-4 border-t border-border-subtle flex justify-between items-center">
+<button class="text-link-blue font-label-sm text-label-sm hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">visibility</span> View
+                        </button>
+<button class="text-text-muted hover:text-on-surface p-1 rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Empty State (Hidden in this view, included for completeness) -->
+<!-- <div class="flex flex-col items-center justify-center py-stack-xl text-center bg-surface-primary rounded-xl border border-border-subtle shadow-sm mt-stack-lg">
+                <img src="placeholder" data-alt="A clean, minimalist vector illustration of an empty file folder sitting on a pristine white desk with subtle pastel shadows, conveying a calm, organized, and inviting workspace." class="w-48 h-48 mb-6 object-contain opacity-80" alt="Empty state illustration">
+                <h3 class="font-headline-md text-headline-md text-on-surface mb-2">No resumes yet</h3>
+                <p class="font-body-md text-body-md text-text-muted max-w-md mx-auto mb-6">Upload your first resume to start getting AI-powered insights and tailoring suggestions for your job applications.</p>
+            </div> -->
+</main>
+</div>
+</body></html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Search - CareerPilot AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#404758",
+                        "error": "#ba1a1a",
+                        "success-green": "#00703C",
+                        "border-subtle": "#E5E7EB",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f9f9f9",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-fixed": "#351000",
+                        "on-surface-variant": "#464555",
+                        "surface-dim": "#dadada",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "tertiary-fixed": "#ffdbcc",
+                        "on-background": "#1a1c1c",
+                        "primary": "#3525cd",
+                        "secondary-container": "#d9dff5",
+                        "secondary": "#575e70",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-surface": "#2f3131",
+                        "text-muted": "#6B7280",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "tertiary": "#7e3000",
+                        "secondary-fixed": "#dce2f7",
+                        "surface-variant": "#e2e2e2",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#0f0069",
+                        "surface-primary": "#FFFFFF",
+                        "inverse-primary": "#c3c0ff",
+                        "outline-variant": "#c7c4d8",
+                        "on-primary": "#ffffff",
+                        "outline": "#777587",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "tertiary-container": "#a44100",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "primary-container": "#4f46e5",
+                        "on-secondary-fixed": "#141b2b",
+                        "primary-fixed": "#e2dfff",
+                        "on-primary-container": "#dad7ff",
+                        "surface-container": "#eeeeee",
+                        "link-blue": "#1D70B8",
+                        "on-secondary-container": "#5c6274",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#4d44e3",
+                        "secondary-fixed-dim": "#c0c6db",
+                        "on-tertiary-container": "#ffd2be",
+                        "surface-container-low": "#f3f3f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "container-max": "1200px",
+                        "gutter": "24px",
+                        "stack-xl": "64px",
+                        "stack-sm": "8px",
+                        "base": "8px",
+                        "stack-md": "16px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "label-xs": ["Inter"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-xs": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background flex min-h-screen antialiased">
+<!-- SideNavBar -->
+<nav class="bg-surface-container-lowest h-screen w-64 flex flex-col border-r border-border-subtle shadow-sm fixed left-0 top-0 p-4 space-y-stack-md hidden md:flex z-40">
+<div class="mb-8 flex items-center gap-3 px-2 pt-2">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">sailing</span>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">CareerPilot AI</h1>
+<p class="font-label-xs text-label-xs text-on-surface-variant">The Calm Mentor</p>
+</div>
+</div>
+<button class="w-full bg-primary-container text-on-primary py-2 px-4 rounded-lg font-label-sm text-label-sm font-medium hover:bg-primary transition-colors flex items-center justify-center gap-2 shadow-sm mb-4">
+<span class="material-symbols-outlined text-[18px]">add</span>
+            New Application
+        </button>
+<div class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span class="font-label-sm text-label-sm">Resume Library</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-secondary-container text-on-secondary-container font-semibold rounded-lg translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined text-[20px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="font-label-sm text-label-sm">Job Search</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+<span class="font-label-sm text-label-sm">Application Tracker</span>
+</a>
+</div>
+<div class="mt-auto flex flex-col gap-1 pt-4 border-t border-border-subtle">
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:bg-surface-container rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">help</span>
+<span class="font-label-sm text-label-sm">Support</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col md:ml-64 w-full">
+<!-- TopNavBar (Mobile Only for visual clarity in this example, though spec says use TopAppBar on web, SideNav acts as main anchor here. Adapting to include TopNavBar as requested) -->
+<header class="bg-surface w-full h-16 border-b border-border-subtle shadow-sm flex justify-between items-center px-gutter sticky top-0 z-50 md:hidden">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-primary">CareerPilot AI</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container-low transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<img alt="User profile photo" class="w-8 h-8 rounded-full object-cover border border-border-subtle" data-alt="A small, professional headshot of a user against a neutral background. Warm lighting, confident expression. Minimalist, light-mode UI context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrerCRz3HBWRM-hSTTuPx6WhvxfQci2rzDLBEfYX1RyYh7lCF41gLGpqC4i8qSSemTzDrqBFMlFt-d9Z_RSSHQ3pV9UkVNN4dbeIwxyM6w69u-INupKLLgK-v6N0ykHU2CotSGg6tIyQZT4yynpuE6uMArB3iY7Pw-76Mi6ilW-uJovaZibAfPJRnMlwR1mUVrqkuhTApXlYswcjgQrxDoI4Z_ki3pVqtYgnTuiD2Pg6qoGsmhYT5W"/>
+</div>
+</header>
+<!-- Page Content Container -->
+<main class="flex-1 p-gutter md:p-stack-lg max-w-container-max mx-auto w-full">
+<!-- Page Header -->
+<div class="mb-stack-lg flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-background mb-2">Find Your Next Role</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">We've identified several opportunities that strongly align with your profile and recent experience.</p>
+</div>
+<div class="relative w-full sm:w-auto">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-muted">search</span>
+<input class="w-full sm:w-80 pl-10 pr-4 py-2 bg-surface-primary border border-border-subtle rounded-lg font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm" placeholder="Search roles, skills, or companies..." type="text"/>
+</div>
+</div>
+<!-- Main Layout Grid -->
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Sidebar Filters (Left) -->
+<aside class="w-full lg:w-64 shrink-0 space-y-stack-md">
+<!-- Filter Section: Job Type -->
+<div class="bg-surface-primary rounded-xl border border-border-subtle p-6 shadow-sm">
+<h3 class="font-label-sm text-label-sm font-semibold text-on-background mb-4 uppercase tracking-wider text-xs">Job Type</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-border-subtle text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-background transition-colors">Full-time</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-border-subtle text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-background transition-colors">Contract</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-border-subtle text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-background transition-colors">Remote</span>
+</label>
+</div>
+</div>
+<!-- Filter Section: Experience Level -->
+<div class="bg-surface-primary rounded-xl border border-border-subtle p-6 shadow-sm">
+<h3 class="font-label-sm text-label-sm font-semibold text-on-background mb-4 uppercase tracking-wider text-xs">Experience Level</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-border-subtle text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-background transition-colors">Entry Level</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-border-subtle text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-background transition-colors">Mid-Senior Level</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-border-subtle text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-background transition-colors">Director</span>
+</label>
+</div>
+</div>
+<!-- Filter Section: Salary -->
+<div class="bg-surface-primary rounded-xl border border-border-subtle p-6 shadow-sm">
+<h3 class="font-label-sm text-label-sm font-semibold text-on-background mb-4 uppercase tracking-wider text-xs">Salary Expectation</h3>
+<div class="px-2">
+<input class="w-full h-1 bg-surface-variant rounded-lg appearance-none cursor-pointer accent-primary" max="250" min="50" type="range" value="120"/>
+<div class="flex justify-between mt-2 font-label-xs text-label-xs text-text-muted">
+<span>$50k</span>
+<span>$120k+</span>
+<span>$250k</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Job List (Right Canvas) -->
+<div class="flex-1 space-y-4">
+<!-- AI Insight Banner -->
+<div class="bg-secondary-container border-l-2 border-primary p-4 rounded-r-lg flex items-start gap-3 shadow-sm mb-6">
+<span class="material-symbols-outlined text-primary mt-0.5">auto_awesome</span>
+<p class="font-body-md text-body-md text-on-secondary-container">
+                            Based on your recent updates, we've prioritized roles demanding strong <span class="font-semibold text-on-background">Product Strategy</span> and <span class="font-semibold text-on-background">React</span> experience.
+                        </p>
+</div>
+<!-- Job Card 1 -->
+<div class="bg-surface-primary rounded-xl border border-border-subtle p-6 shadow-[0px_4px_12px_rgba(0,0,0,0.05)] hover:border-primary transition-colors group relative overflow-hidden flex flex-col md:flex-row gap-6">
+<div class="flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-border-subtle">
+<img alt="Company Logo" class="w-8 h-8 object-contain" data-alt="A minimalist, flat-design abstract logo for a tech company, featuring geometric shapes in shades of blue. Clean white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEmNdCJAKK_D-fCNXQHxcie2D23vi5SdQvCH0ooxu0IsyvijjqZsBDK8y173EogiEWpVR51RLVul3MyhICLavxqbrwgm1LsadPj2McFC-UYAoPqmgMOrIiqVIMBZAXAKGV3_VYP_bJZUH1k5Zt7piFDZo5OhTM3cM8P20qLbdj5qWu3zkr2Tg5xA6DIye1pEMAByeqghRnPe-SczvUGV1aQPY0KpYlHBLUYzhHGWcLf8NH7dmCvxdW"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background text-lg">Senior Product Designer</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Acme Corp · Remote</p>
+</div>
+</div>
+<button class="text-text-muted hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="bg-surface-container px-2.5 py-1 rounded-md font-label-xs text-label-xs text-on-surface-variant">Figma</span>
+<span class="bg-surface-container px-2.5 py-1 rounded-md font-label-xs text-label-xs text-on-surface-variant">Strategy</span>
+<span class="bg-surface-container px-2.5 py-1 rounded-md font-label-xs text-label-xs text-on-surface-variant">User Research</span>
+</div>
+<p class="mt-4 font-body-md text-body-md text-text-muted text-sm line-clamp-2">Lead the design of our core enterprise platform. You'll work closely with engineering and product management to define intuitive experiences for complex data workflows.</p>
+</div>
+<div class="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-start gap-4 md:w-32 shrink-0 md:border-l border-border-subtle md:pl-6">
+<div class="inline-flex items-center gap-1 bg-success-green/10 text-success-green px-3 py-1 rounded-full font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                                87% Match
+                            </div>
+<div class="text-right">
+<p class="font-label-sm text-label-sm text-on-background font-medium">$130k - $160k</p>
+<p class="font-label-xs text-label-xs text-text-muted mt-1">2 days ago</p>
+</div>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-surface-primary rounded-xl border border-border-subtle p-6 shadow-[0px_4px_12px_rgba(0,0,0,0.05)] hover:border-primary transition-colors group relative overflow-hidden flex flex-col md:flex-row gap-6">
+<div class="flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-border-subtle">
+<img alt="Company Logo" class="w-8 h-8 object-contain" data-alt="A simple, modern typographic logo for a startup, consisting of the letter 'N' in a clean sans-serif font, dark grey. Light mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0ipuqqvWemkM1Sr1LcHwO7f2GgoVYuXjm5Tni6CSdvqnyjQjyLlPbxOsOLlnUPi_MqF61XCcXrCEFsRj5IMV1ssSfVCZXshldLY91Umv__3K0TQODpax5Glj_-Q6_Udh7IgyZpMu6hslwvwa9PeNl4Mk6dRC7qGxcOYo40HDv-2qYILY01_XapsuTewZ-rzyZOGXJn-pLgFcJyt-8mKhfEWztOpJoDTmxtlsy1FT2A62m2UBtEHZy"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background text-lg">Frontend Engineer (React)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Nexus Technologies · New York, NY (Hybrid)</p>
+</div>
+</div>
+<button class="text-text-muted hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="bg-surface-container px-2.5 py-1 rounded-md font-label-xs text-label-xs text-on-surface-variant">React</span>
+<span class="bg-surface-container px-2.5 py-1 rounded-md font-label-xs text-label-xs text-on-surface-variant">TypeScript</span>
+<span class="bg-surface-container px-2.5 py-1 rounded-md font-label-xs text-label-xs text-on-surface-variant">Tailwind CSS</span>
+</div>
+<p class="mt-4 font-body-md text-body-md text-text-muted text-sm line-clamp-2">Join our core platform team to build fast, accessible, and responsive user interfaces. Experience with modern React patterns and state management is required.</p>
+</div>
+<div class="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-start gap-4 md:w-32 shrink-0 md:border-l border-border-subtle md:pl-6">
+<div class="inline-flex items-center gap-1 bg-success-green/10 text-success-green px-3 py-1 rounded-full font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                                82% Match
+                            </div>
+<div class="text-right">
+<p class="font-label-sm text-label-sm text-on-background font-medium">$140k - $175k</p>
+<p class="font-label-xs text-label-xs text-text-muted mt-1">1 week ago</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

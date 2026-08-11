@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CareerPilot AI - Application Tracker</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "on-secondary-fixed-variant": "#404758",
+                            "error": "#ba1a1a",
+                            "success-green": "#00703C",
+                            "border-subtle": "#E5E7EB",
+                            "tertiary-fixed-dim": "#ffb695",
+                            "surface-container-lowest": "#ffffff",
+                            "background": "#f9f9f9",
+                            "surface-bright": "#f9f9f9",
+                            "on-tertiary-fixed": "#351000",
+                            "on-surface-variant": "#464555",
+                            "surface-dim": "#dadada",
+                            "on-primary-fixed-variant": "#3323cc",
+                            "tertiary-fixed": "#ffdbcc",
+                            "on-background": "#1a1c1c",
+                            "primary": "#3525cd",
+                            "secondary-container": "#d9dff5",
+                            "secondary": "#575e70",
+                            "on-error-container": "#93000a",
+                            "surface-container-high": "#e8e8e8",
+                            "inverse-surface": "#2f3131",
+                            "text-muted": "#6B7280",
+                            "on-error": "#ffffff",
+                            "on-surface": "#1a1c1c",
+                            "tertiary": "#7e3000",
+                            "secondary-fixed": "#dce2f7",
+                            "surface-variant": "#e2e2e2",
+                            "on-secondary": "#ffffff",
+                            "on-primary-fixed": "#0f0069",
+                            "surface-primary": "#FFFFFF",
+                            "inverse-primary": "#c3c0ff",
+                            "outline-variant": "#c7c4d8",
+                            "on-primary": "#ffffff",
+                            "outline": "#777587",
+                            "error-container": "#ffdad6",
+                            "surface-container-highest": "#e2e2e2",
+                            "surface": "#f9f9f9",
+                            "tertiary-container": "#a44100",
+                            "primary-fixed-dim": "#c3c0ff",
+                            "on-tertiary-fixed-variant": "#7b2f00",
+                            "primary-container": "#4f46e5",
+                            "on-secondary-fixed": "#141b2b",
+                            "primary-fixed": "#e2dfff",
+                            "on-primary-container": "#dad7ff",
+                            "surface-container": "#eeeeee",
+                            "link-blue": "#1D70B8",
+                            "on-secondary-container": "#5c6274",
+                            "inverse-on-surface": "#f0f1f1",
+                            "on-tertiary": "#ffffff",
+                            "surface-tint": "#4d44e3",
+                            "secondary-fixed-dim": "#c0c6db",
+                            "on-tertiary-container": "#ffd2be",
+                            "surface-container-low": "#f3f3f3"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "stack-lg": "32px",
+                            "container-max": "1200px",
+                            "gutter": "24px",
+                            "stack-xl": "64px",
+                            "stack-sm": "8px",
+                            "base": "8px",
+                            "stack-md": "16px",
+                            "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                            "headline-md": [
+                                    "Plus Jakarta Sans"
+                            ],
+                            "label-xs": [
+                                    "Inter"
+                            ],
+                            "display-lg": [
+                                    "Plus Jakarta Sans"
+                            ],
+                            "body-md": [
+                                    "Inter"
+                            ],
+                            "label-sm": [
+                                    "Inter"
+                            ],
+                            "display-lg-mobile": [
+                                    "Plus Jakarta Sans"
+                            ],
+                            "body-lg": [
+                                    "Inter"
+                            ]
+                    },
+                    "fontSize": {
+                            "headline-md": [
+                                    "24px",
+                                    {
+                                            "lineHeight": "1.3",
+                                            "letterSpacing": "-0.01em",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "label-xs": [
+                                    "12px",
+                                    {
+                                            "lineHeight": "1.2",
+                                            "letterSpacing": "0.05em",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "display-lg": [
+                                    "48px",
+                                    {
+                                            "lineHeight": "1.1",
+                                            "letterSpacing": "-0.02em",
+                                            "fontWeight": "700"
+                                    }
+                            ],
+                            "body-md": [
+                                    "16px",
+                                    {
+                                            "lineHeight": "1.5",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "label-sm": [
+                                    "14px",
+                                    {
+                                            "lineHeight": "1.4",
+                                            "letterSpacing": "0.01em",
+                                            "fontWeight": "500"
+                                    }
+                            ],
+                            "display-lg-mobile": [
+                                    "32px",
+                                    {
+                                            "lineHeight": "1.2",
+                                            "letterSpacing": "-0.02em",
+                                            "fontWeight": "700"
+                                    }
+                            ],
+                            "body-lg": [
+                                    "18px",
+                                    {
+                                            "lineHeight": "1.6",
+                                            "fontWeight": "400"
+                                    }
+                            ]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .drag-over {
+            background-color: theme('colors.surface-container');
+            border: 2px dashed theme('colors.primary-container');
+            border-radius: theme('borderRadius.lg');
+        }
+        .dragging {
+            opacity: 0.5;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: scale(1.02);
+        }
+        
+        /* Hide scrollbar for kanban board */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md h-screen overflow-hidden flex">
+<!-- SideNavBar (from JSON) -->
+<nav class="hidden md:flex h-screen w-64 flex-col bg-surface-container-lowest border-r border-border-subtle shadow-sm fixed left-0 top-0 p-4 space-y-stack-md z-40">
+<div class="flex items-center gap-3 px-2 mb-8">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container font-headline-md font-bold">
+                CP
+            </div>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">CareerPilot AI</h1>
+<p class="font-label-xs text-label-xs text-on-surface-variant">The Calm Mentor</p>
+</div>
+</div>
+<button class="w-full py-3 bg-primary-container text-white font-label-sm text-label-sm font-medium rounded-lg hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2 mb-6">
+<span class="material-symbols-outlined text-[18px]">add</span>
+            New Application
+        </button>
+<div class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span class="font-label-sm text-label-sm">Resume Library</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">search</span>
+<span class="font-label-sm text-label-sm">Job Search</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-on-secondary-container font-semibold rounded-lg transition-all duration-200 translate-x-1" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">assignment_turned_in</span>
+<span class="font-label-sm text-label-sm">Application Tracker</span>
+</a>
+</div>
+<div class="mt-auto space-y-2 pt-4 border-t border-border-subtle">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">help</span>
+<span class="font-label-sm text-label-sm">Support</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col md:ml-64 h-screen">
+<!-- TopNavBar (from JSON) -->
+<header class="w-full h-16 bg-surface flex justify-between items-center px-gutter sticky top-0 z-50 border-b border-border-subtle shadow-sm">
+<div class="flex items-center md:hidden">
+<h1 class="font-headline-md text-headline-md font-bold text-primary">CareerPilot AI</h1>
+</div>
+<!-- search_bar: on_left -->
+<div class="hidden md:flex flex-1 max-w-md ml-4 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-border-subtle rounded-full text-body-md font-body-md focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-transparent" placeholder="Search applications..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low transition-colors rounded-full relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-border-subtle">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="A professional headshot of a person, well-lit, neutral background, suitable for a corporate profile picture. The lighting is soft and even, highlighting their features clearly without harsh shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmFHYURFStYy07iaQxbunBMN8V3gQZeBq7KL5W91KebZ7-UkPrm46pcmbXdCZhEDcs5f1ltSQK8GdKT4ZukY7Qvv7C1kE0G4NhouxTFgpS1ql3BkX5rXLux47Ld9EluzPXKZR79fiDKgI3gsyUETaQ5XgAK1bf6rHEW_RL5pVHAQvZELA94okSttmQRkB3jNJKn05IvqmXB8-1K_3dwQPKc2E2cgyQaI8O7M6C_p-DGTMYRq9g5TZQ"/>
+</div>
+</div>
+</header>
+<!-- Kanban Board Container -->
+<main class="flex-1 overflow-x-auto overflow-y-hidden no-scrollbar bg-background p-gutter">
+<div class="mb-6 flex justify-between items-end">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Application Tracker</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Manage your active job applications and interviews.</p>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-surface border border-border-subtle rounded-lg text-label-sm font-label-sm font-medium text-on-surface flex items-center gap-2 hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px]">filter_list</span> Filter
+                    </button>
+</div>
+</div>
+<!-- Board -->
+<div class="flex gap-6 h-[calc(100vh-180px)] min-w-max pb-8">
+<!-- Saved Column -->
+<div class="w-72 flex flex-col bg-surface-container-low rounded-xl border border-border-subtle p-3 kanban-column">
+<div class="flex justify-between items-center mb-4 px-2">
+<h3 class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider">Saved</h3>
+<span class="bg-surface-variant text-on-surface-variant font-label-xs text-label-xs px-2 py-0.5 rounded-full">3</span>
+</div>
+<div class="flex-1 overflow-y-auto space-y-3 no-scrollbar kanban-dropzone">
+<!-- Card 1 -->
+<div class="bg-surface p-4 rounded-lg border border-border-subtle shadow-[0_2px_4px_rgba(0,0,0,0.02)] cursor-grab hover:border-primary-container transition-colors kanban-card" draggable="true">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-label-sm text-label-sm font-semibold text-on-surface leading-tight">Product Designer</h4>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">more_vert</span>
+</div>
+<p class="font-label-xs text-label-xs text-on-surface-variant mb-4">Acme Corp</p>
+<div class="flex justify-between items-center mt-2 pt-3 border-t border-border-subtle">
+<span class="font-label-xs text-label-xs text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 2d ago
+                                </span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]" title="View Notes">sticky_note_2</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Applied Column -->
+<div class="w-72 flex flex-col bg-surface-container-low rounded-xl border border-border-subtle p-3 kanban-column">
+<div class="flex justify-between items-center mb-4 px-2">
+<h3 class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider">Applied</h3>
+<span class="bg-surface-variant text-on-surface-variant font-label-xs text-label-xs px-2 py-0.5 rounded-full">2</span>
+</div>
+<div class="flex-1 overflow-y-auto space-y-3 no-scrollbar kanban-dropzone">
+<!-- Card 2 -->
+<div class="bg-surface p-4 rounded-lg border border-border-subtle shadow-[0_2px_4px_rgba(0,0,0,0.02)] cursor-grab hover:border-primary-container transition-colors kanban-card" draggable="true">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-label-sm text-label-sm font-semibold text-on-surface leading-tight">Senior UX Designer</h4>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">more_vert</span>
+</div>
+<p class="font-label-xs text-label-xs text-on-surface-variant mb-4">TechFlow</p>
+<div class="flex justify-between items-center mt-2 pt-3 border-t border-border-subtle">
+<span class="font-label-xs text-label-xs text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 5d ago
+                                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Screening Column -->
+<div class="w-72 flex flex-col bg-surface-container-low rounded-xl border border-border-subtle p-3 kanban-column">
+<div class="flex justify-between items-center mb-4 px-2">
+<h3 class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider">Screening</h3>
+<span class="bg-surface-variant text-on-surface-variant font-label-xs text-label-xs px-2 py-0.5 rounded-full">1</span>
+</div>
+<div class="flex-1 overflow-y-auto space-y-3 no-scrollbar kanban-dropzone">
+<!-- Empty State for styling visual -->
+<div class="h-full flex flex-col items-center justify-center opacity-50 border-2 border-dashed border-border-subtle rounded-lg p-4 text-center">
+<span class="material-symbols-outlined text-[24px] text-on-surface-variant mb-2">drag_indicator</span>
+<p class="font-label-xs text-label-xs text-on-surface-variant">Drop cards here</p>
+</div>
+</div>
+</div>
+<!-- Interview Column -->
+<div class="w-72 flex flex-col bg-surface-container-low rounded-xl border border-border-subtle p-3 kanban-column">
+<div class="flex justify-between items-center mb-4 px-2">
+<h3 class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider">Interview</h3>
+<span class="bg-surface-variant text-on-surface-variant font-label-xs text-label-xs px-2 py-0.5 rounded-full">1</span>
+</div>
+<div class="flex-1 overflow-y-auto space-y-3 no-scrollbar kanban-dropzone">
+<!-- Card 3 -->
+<div class="bg-surface p-4 rounded-lg border border-primary-container shadow-[0_4px_12px_rgba(0,0,0,0.05)] cursor-grab transition-colors kanban-card relative overflow-hidden" draggable="true">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
+<div class="flex justify-between items-start mb-2 pl-2">
+<h4 class="font-label-sm text-label-sm font-semibold text-on-surface leading-tight">Lead UI Designer</h4>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">more_vert</span>
+</div>
+<p class="font-label-xs text-label-xs text-on-surface-variant mb-4 pl-2">FinTech Global</p>
+<div class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded text-label-xs font-label-xs inline-flex items-center gap-1 mb-3 ml-2">
+<span class="material-symbols-outlined text-[14px]">videocam</span> Round 2: Tech
+                            </div>
+<div class="flex justify-between items-center mt-2 pt-3 border-t border-border-subtle pl-2">
+<span class="font-label-xs text-label-xs text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 12d ago
+                                </span>
+<span class="material-symbols-outlined text-primary-container text-[16px]" style="font-variation-settings: 'FILL' 1;" title="Notes available">sticky_note_2</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Offer Column -->
+<div class="w-72 flex flex-col bg-surface-container-low rounded-xl border border-border-subtle p-3 kanban-column">
+<div class="flex justify-between items-center mb-4 px-2">
+<h3 class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider">Offer</h3>
+<span class="bg-surface-variant text-on-surface-variant font-label-xs text-label-xs px-2 py-0.5 rounded-full">0</span>
+</div>
+<div class="flex-1 overflow-y-auto space-y-3 no-scrollbar kanban-dropzone">
+<div class="h-full flex flex-col items-center justify-center opacity-50 border-2 border-dashed border-border-subtle rounded-lg p-4 text-center">
+<p class="font-label-xs text-label-xs text-on-surface-variant">Waiting for good news!</p>
+</div>
+</div>
+</div>
+<!-- Rejected Column -->
+<div class="w-72 flex flex-col bg-surface-container-low rounded-xl border border-border-subtle p-3 kanban-column opacity-70 hover:opacity-100 transition-opacity">
+<div class="flex justify-between items-center mb-4 px-2">
+<h3 class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider">Rejected</h3>
+<span class="bg-surface-variant text-on-surface-variant font-label-xs text-label-xs px-2 py-0.5 rounded-full">1</span>
+</div>
+<div class="flex-1 overflow-y-auto space-y-3 no-scrollbar kanban-dropzone">
+<div class="bg-surface p-4 rounded-lg border border-border-subtle shadow-[0_2px_4px_rgba(0,0,0,0.02)] cursor-grab kanban-card filter grayscale opacity-75" draggable="true">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-label-sm text-label-sm font-semibold text-on-surface leading-tight strike-through">UX Researcher</h4>
+</div>
+<p class="font-label-xs text-label-xs text-on-surface-variant mb-4">Startup Inc</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.kanban-card');
+            const dropzones = document.querySelectorAll('.kanban-dropzone');
+
+            let draggedCard = null;
+
+            cards.forEach(card => {
+                card.addEventListener('dragstart', (e) => {
+                    draggedCard = card;
+                    setTimeout(() => {
+                        card.classList.add('dragging');
+                    }, 0);
+                    e.dataTransfer.effectAllowed = 'move';
+                });
+
+                card.addEventListener('dragend', () => {
+                    draggedCard.classList.remove('dragging');
+                    draggedCard = null;
+                    dropzones.forEach(zone => zone.parentElement.classList.remove('drag-over'));
+                });
+            });
+
+            dropzones.forEach(zone => {
+                zone.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    zone.parentElement.classList.add('drag-over');
+                });
+
+                zone.addEventListener('dragleave', () => {
+                    zone.parentElement.classList.remove('drag-over');
+                });
+
+                zone.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    zone.parentElement.classList.remove('drag-over');
+                    if (draggedCard) {
+                        zone.appendChild(draggedCard);
+                        // In a real app, update counts here
+                    }
+                });
+            });
+        });
+    </script>
+</body></html>

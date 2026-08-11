@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CareerPilot AI - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#404758",
+                        "error": "#ba1a1a",
+                        "success-green": "#00703C",
+                        "border-subtle": "#E5E7EB",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f9f9f9",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-fixed": "#351000",
+                        "on-surface-variant": "#464555",
+                        "surface-dim": "#dadada",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "tertiary-fixed": "#ffdbcc",
+                        "on-background": "#1a1c1c",
+                        "primary": "#3525cd",
+                        "secondary-container": "#d9dff5",
+                        "secondary": "#575e70",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-surface": "#2f3131",
+                        "text-muted": "#6B7280",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "tertiary": "#7e3000",
+                        "secondary-fixed": "#dce2f7",
+                        "surface-variant": "#e2e2e2",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#0f0069",
+                        "surface-primary": "#FFFFFF",
+                        "inverse-primary": "#c3c0ff",
+                        "outline-variant": "#c7c4d8",
+                        "on-primary": "#ffffff",
+                        "outline": "#777587",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "tertiary-container": "#a44100",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "primary-container": "#4f46e5",
+                        "on-secondary-fixed": "#141b2b",
+                        "primary-fixed": "#e2dfff",
+                        "on-primary-container": "#dad7ff",
+                        "surface-container": "#eeeeee",
+                        "link-blue": "#1D70B8",
+                        "on-secondary-container": "#5c6274",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#4d44e3",
+                        "secondary-fixed-dim": "#c0c6db",
+                        "on-tertiary-container": "#ffd2be",
+                        "surface-container-low": "#f3f3f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "container-max": "1200px",
+                        "gutter": "24px",
+                        "stack-xl": "64px",
+                        "stack-sm": "8px",
+                        "base": "8px",
+                        "stack-md": "16px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "label-xs": ["Inter"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-xs": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #FAFAFA; } /* Canvas Level 0 */
+        .ambient-shadow { box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); }
+    </style>
+</head>
+<body class="h-full flex text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar (Hidden on mobile) -->
+<nav class="hidden md:flex flex-col h-screen w-64 bg-surface-container-lowest dark:bg-surface-container-low border-r border-border-subtle dark:border-outline-variant shadow-sm fixed left-0 top-0 p-4 space-y-stack-md z-40">
+<div class="flex items-center gap-3 px-2 py-4 mb-4">
+<img alt="CareerPilot Logo" class="w-8 h-8 rounded-full" data-alt="A clean, minimalist abstract logo for a career coaching AI platform. Geometric shapes in indigo and white, conveying professionalism, clarity, and forward momentum. Light background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc_SnYj3hCoFD3GtdBbWU6QRlya6PHdhqz7anv4tgzD_R5BGks_tufWcOl6BSMQySwoBzasGB-gn0WUTBtvaA1xyPBBpqoApiFhrLviMTl8qgJkWZhmIz-9iKM_xMyVSJy9J7eK9PtU0oVh_kYAynwNpEa8rTSp7yrjQHrro5rR2fFJOjK6MrZsLpLJb7x95Kx-GsB1kd1MHEQUIKIt7LYgveSplz0f4ykYKTy3fGRsM1iBtzbFWc7"/>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">CareerPilot AI</h1>
+<p class="font-label-xs text-label-xs text-on-surface-variant">The Calm Mentor</p>
+</div>
+</div>
+<div class="flex flex-col gap-1 flex-grow">
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-secondary-fixed-variant hover:bg-surface-container dark:hover:bg-surface-container-high rounded-lg hover:bg-surface-container transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-secondary-fixed-variant hover:bg-surface-container dark:hover:bg-surface-container-high rounded-lg hover:bg-surface-container transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-label-sm text-label-sm">Resume Library</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-secondary-fixed-variant hover:bg-surface-container dark:hover:bg-surface-container-high rounded-lg hover:bg-surface-container transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-sm text-label-sm">Job Search</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-secondary-fixed-variant hover:bg-surface-container dark:hover:bg-surface-container-high rounded-lg hover:bg-surface-container transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="assignment_turned_in">assignment_turned_in</span>
+<span class="font-label-sm text-label-sm">Application Tracker</span>
+</a>
+</div>
+<div class="mt-auto flex flex-col gap-1 pt-4 border-t border-border-subtle">
+<a class="flex items-center gap-3 px-3 py-2 bg-secondary-container dark:bg-primary-container text-on-secondary-container dark:text-on-primary-container font-semibold rounded-lg hover:bg-surface-container transition-all duration-200 translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-secondary-fixed-variant hover:bg-surface-container dark:hover:bg-surface-container-high rounded-lg hover:bg-surface-container transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-label-sm text-label-sm">Support</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col min-w-0 md:ml-64">
+<!-- TopNavBar (Mobile Only) -->
+<nav class="md:hidden flex justify-between items-center px-gutter w-full sticky top-0 z-50 h-16 bg-surface dark:bg-surface-container-low border-b border-border-subtle dark:border-outline-variant shadow-sm">
+<div class="flex items-center gap-2">
+<h1 class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim">CareerPilot AI</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container transition-colors rounded-full p-2">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<img alt="User profile photo" class="w-8 h-8 rounded-full object-cover" data-alt="A small circular user profile photo showing a young professional looking confident. Bright, minimalist lighting on a plain background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqfE0yh4yI3UiSS3kV0yg-tgOeM_HQ-uUTUfBLe_SboswKS3rEPLdiUkNvlUsuVxK4TILO1Jnic3jfGkTvTEXuFNUuomVaMx6pkyqBUWTeE5cmzpO7LNXN02eHp6z8zQFXddCDskw6JPjGlR6QI491zgtZv8cYGNQHWn8xxz8LdTmMOmYlXAkIWxg3VWfcPuArCxBTUXeyuwW8DP6MNb-y-gBVu2mzucXUWnUjOAAUQmNxV4HVXm3T"/>
+</div>
+</nav>
+<!-- Canvas -->
+<main class="flex-1 overflow-y-auto p-4 md:p-8 lg:p-stack-xl">
+<div class="max-w-container-max mx-auto space-y-stack-xl">
+<header class="space-y-stack-sm">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">Settings</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage your account preferences and security.</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Account Information Form -->
+<section class="lg:col-span-8 space-y-stack-md">
+<div class="bg-surface-primary border border-border-subtle rounded-xl p-6 md:p-8 ambient-shadow space-y-stack-md">
+<h3 class="font-headline-md text-headline-md text-on-surface border-b border-border-subtle pb-4 mb-6">Account Information</h3>
+<div class="flex flex-col md:flex-row gap-6 items-start">
+<div class="flex-shrink-0">
+<div class="relative group cursor-pointer">
+<img class="w-24 h-24 rounded-full object-cover border border-border-subtle" data-alt="A larger circular user profile photo of a young professional in a light-filled room. They are wearing smart casual attire. The image is clean and well-lit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFeGsDWRiSBmroC_JpecGu87xPZVkOPQ_5o0AUBDHaI1_0H4Vbm1jG9yrNrnoJcNdSxpus2gVDx9O-RGDudlaObe2PX5BnJa8GgbgU4yRVygJekndwvp_E3NqSUrkWjK0HfMwXz04ZONph0oHKFmCX9Dnlma8vdQ9Hdv99DJKiFc14bcGoncE74twpnMGh1OrAw1N5s7nVuoR8rS0fiOmpH0IEBz_axrc2vzuQbp1LVj6gxmSLFmcP"/>
+<div class="absolute inset-0 bg-black/40 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white" data-icon="edit">edit</span>
+</div>
+</div>
+</div>
+<div class="flex-grow space-y-4 w-full">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant block">First Name</label>
+<input class="w-full bg-surface-container-lowest border border-border-subtle rounded-lg px-4 py-2 font-body-md text-body-md focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-white transition-shadow outline-none" type="text" value="Jane"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant block">Last Name</label>
+<input class="w-full bg-surface-container-lowest border border-border-subtle rounded-lg px-4 py-2 font-body-md text-body-md focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-white transition-shadow outline-none" type="text" value="Doe"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant block">Email Address</label>
+<input class="w-full bg-surface-container-lowest border border-border-subtle rounded-lg px-4 py-2 font-body-md text-body-md focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-white transition-shadow outline-none text-text-muted" disabled="" type="email" value="jane.doe@example.com"/>
+<p class="font-label-xs text-label-xs text-text-muted mt-1">Contact support to change your email address.</p>
+</div>
+</div>
+</div>
+<div class="pt-4 flex justify-end">
+<button class="bg-primary-container hover:bg-primary-container/90 text-on-primary font-label-sm text-label-sm px-6 py-2.5 rounded-lg transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    Save Changes
+                                </button>
+</div>
+</div>
+</section>
+<!-- Sidebar / Secondary Panels -->
+<div class="lg:col-span-4 space-y-gutter">
+<!-- Security -->
+<section class="bg-surface-primary border border-border-subtle rounded-xl p-6 ambient-shadow space-y-4">
+<div class="flex items-center gap-2 border-b border-border-subtle pb-3">
+<span class="material-symbols-outlined text-primary" data-icon="lock">lock</span>
+<h3 class="font-headline-md text-[18px] text-on-surface">Security</h3>
+</div>
+<div class="space-y-4">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant block">Current Password</label>
+<input class="w-full bg-surface-container-lowest border border-border-subtle rounded-lg px-3 py-2 font-body-md text-body-md focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-white transition-shadow outline-none" type="password"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant block">New Password</label>
+<input class="w-full bg-surface-container-lowest border border-border-subtle rounded-lg px-3 py-2 font-body-md text-body-md focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-white transition-shadow outline-none" type="password"/>
+</div>
+<button class="w-full bg-surface-primary border border-border-subtle hover:bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-4 py-2 rounded-lg transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    Update Password
+                                </button>
+</div>
+</section>
+<!-- Notification Preferences -->
+<section class="bg-surface-primary border border-border-subtle rounded-xl p-6 ambient-shadow space-y-4">
+<div class="flex items-center gap-2 border-b border-border-subtle pb-3">
+<span class="material-symbols-outlined text-primary" data-icon="notifications_active">notifications_active</span>
+<h3 class="font-headline-md text-[18px] text-on-surface">Notifications</h3>
+</div>
+<div class="space-y-4 pt-2">
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex flex-col">
+<span class="text-on-surface font-medium">Email Updates</span>
+<span class="text-label-xs text-text-muted">Weekly career insights</span>
+</span>
+<div class="relative">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-6 bg-border-subtle rounded-full peer peer-focus:ring-2 peer-focus:ring-primary peer-focus:ring-offset-2 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</div>
+</label>
+<label class="flex items-center justify-between cursor-pointer group">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex flex-col">
+<span class="text-on-surface font-medium">Push Notifications</span>
+<span class="text-label-xs text-text-muted">Job application status changes</span>
+</span>
+<div class="relative">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-6 bg-border-subtle rounded-full peer peer-focus:ring-2 peer-focus:ring-primary peer-focus:ring-offset-2 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</div>
+</label>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
