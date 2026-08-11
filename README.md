@@ -107,6 +107,15 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the application!
 
+### 4. Stopping the Services
+
+To gracefully shut down the application:
+1. **Frontend & Backend**: Press `Ctrl + C` in their respective terminal windows.
+2. **Docker Dependencies**: Run the following command in the root directory to stop and remove the database containers:
+```bash
+docker-compose down
+```
+
 ## 🧪 Testing and Building
 
 **Frontend Production Build:**
